@@ -1,0 +1,23 @@
+<launch>
+
+  <!-- Launch the empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/> 
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <!-- Spawn the apartment into Gazebo -->
+  <arg name="environment" default="test_apartment" />
+  <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" 
+        args="-sdf -file $(find lucrezio_simulation_environments)/models/$(arg environment)/model.sdf -model $(arg environment)" />
+
+
+	<!-- Upload object locations and spawn them into Gazebo-->
+	<include file="$(find lucrezio_simulation_environments)/launch/upload_object_locations.launch"/>
+  <node name="spawn_objects" pkg="lucrezio_simulation_environments" type="spawn_object.py" args="all"/>
+
+</launch>

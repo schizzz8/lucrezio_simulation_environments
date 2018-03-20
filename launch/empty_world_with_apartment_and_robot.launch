@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- Launch the empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/> 
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="recording" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  
+  <!-- Spawn the apartment into Gazebo -->
+  <arg name="environment" default="test_apartment" />
+  <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" 
+        args="-sdf -file $(find lucrezio_simulation_environments)/models/$(arg environment)/model.sdf -model $(arg environment)" />
+
+
+	<!-- Upload object locations and spawn them into Gazebo-->
+	<include file="$(find lucrezio_simulation_environments)/launch/upload_object_locations.launch"/>
+  <node name="spawn_objects" pkg="lucrezio_simulation_environments" type="spawn_object.py" args="all"/>
+  
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <arg name="model" default="$(find lucrezio_description)/urdf/lucrezio_with_logical.urdf.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+        args="-z 1.0 -Y -1.57 -unpause -urdf -model robot -param robot_description" respawn="false" output="screen" />
+        
+  <node pkg="tf" type="static_transform_publisher" name="camera_link_broadcaster" args="0 0 0 -0.5 0.5 -0.5 0.5 /camera_link /camera_depth_optical_frame 100" />
+
+  <!-- start state publishers -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node pkg="robot_state_publisher" type="robot_state_publisher"  name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+
+  <!-- Run the controller manager -->
+  <rosparam command="load" file="$(find lucrezio_description)/config/diffdrive.yaml" ns="lucrezio" />
+  <node name="lucrezio_controller_spawner" pkg="controller_manager" type="spawner" args="lucrezio --shutdown-timeout 3"/>
+
+</launch>
