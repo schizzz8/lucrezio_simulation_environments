@@ -219,6 +219,8 @@ install(DIRECTORY
   #rviz 
   urdf
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+  
+execute_process(COMMAND cp -a ${CMAKE_SOURCE_DIR}/lucrezio_simulation_environments/models/. $ENV{HOME}/.gazebo/models)
 
 #############
 ## Testing ##
