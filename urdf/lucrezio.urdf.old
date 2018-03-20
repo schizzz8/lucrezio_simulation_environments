@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lucrezio">
+
+  <!-- CONSTANTS -->
+  <xacro:property name="base_length" value="0.4" />
+  <xacro:property name="base_width" value="0.2" />
+  <xacro:property name="base_height" value="0.1" />
+  <xacro:property name="wheel_length" value="0.05" />
+  <xacro:property name="wheel_radius" value="0.1" />
+  
+  <!-- BASE LINK -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="${base_length} ${base_width} ${base_height}"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-${base_length/2 - base_height/2} 0 -${base_height/2}" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="${base_height/2}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-${base_length/2 - base_height/2} 0 -${base_height/2}" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="${base_height/2}" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.6"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT WHEEL -->
+  <link name="left_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder length="${base_height/2}" radius="${base_height}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder length="${base_height/2}" radius="${base_height}" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.6"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+  </link>
+
+  <!-- LEFT WHEEL JOINT -->
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child  link="left_wheel" />
+    <origin xyz="0.1 0.13 0" />
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+  </joint>
+
+  <!-- RIGHT WHEEL -->
+  <link name="right_wheel">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder length="${base_height/2}" radius="${base_height}" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder length="${base_height/2}" radius="${base_height}" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.6"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+    </inertial>
+  </link>
+
+  <!-- RIGHT WHEEL JOINT -->
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child  link="right_wheel" />
+    <origin xyz="0.1 -0.13 0" />
+    <axis rpy="0 0 0" xyz="0 1 0"/>
+  </joint>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>
