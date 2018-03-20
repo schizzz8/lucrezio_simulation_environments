@@ -20,7 +20,7 @@ To test the above mentioned robot models, run:
 	
 this should launch a `Gazebo` empty world and spawn the robot model in it:
 
-![robot_launch](https://github.com/schizzz8/lucrezio_simulation_environments/blob/master/pics/display_launch.png  "robot_launch")
+![robot_launch](https://github.com/schizzz8/lucrezio_simulation_environments/blob/master/pics/robot_launch.png  "robot_launch")
 
 To check that the mobile platform and the sensors are working properly, run:
 
@@ -29,5 +29,3 @@ To check that the mobile platform and the sensors are working properly, run:
 this launches `RViz`, with several displays:
 
 ![display_launch](https://github.com/schizzz8/lucrezio_simulation_environments/blob/master/pics/display_launch.png  "display_launch")
-
- lucrezio_simulation_environments/pics/display_launch.png 
