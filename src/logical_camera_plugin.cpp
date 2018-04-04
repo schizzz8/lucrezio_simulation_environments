@@ -25,7 +25,7 @@ void LogicalCameraPlugin::Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf)
     ROS_INFO("LogicalCameraPlugin correctly loaded!!!");
     ROS_INFO("_near:=%g",this->parentSensor->Near());
     ROS_INFO("_far:=%g",this->parentSensor->Far());
-    ROS_INFO("_horizontalFOV:=%g",this->parentSensor->HorizontalFOV());
+    ROS_INFO("_horizontalFOV:=%g",*(this->parentSensor->HorizontalFOV()));
     ROS_INFO("_aspect_ratio:=%g",this->parentSensor->AspectRatio());
 
     nh = new ros::NodeHandle("~");
