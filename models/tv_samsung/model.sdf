@@ -33,9 +33,10 @@
         <max_contacts>10</max_contacts>
         <pose frame=''>0 0 0.335 0 -0 0</pose>
         <geometry>
-          <box>
-            <size>0 0 0</size>
-          </box>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://tv_samsung/meshes/tv_samsung.dae</uri>
+          </mesh>
         </geometry>
         <surface>
           <friction>
