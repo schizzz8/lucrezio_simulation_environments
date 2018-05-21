@@ -12,7 +12,7 @@
   </include>
   
   <!-- Spawn the apartment into Gazebo -->
-  <arg name="environment" default="test_apartment" />
+  <arg name="environment" default="test_apartment_2" />
   <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" 
         args="-sdf -file $(find lucrezio_simulation_environments)/models/$(arg environment)/model.sdf -model $(arg environment)" />
 
