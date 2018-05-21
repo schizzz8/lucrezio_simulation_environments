@@ -173,7 +173,7 @@
   <gazebo reference="laser_link">
     <sensor type="gpu_ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
-      <visualize>true</visualize>
+      <visualize>false</visualize>
       <update_rate>40</update_rate>
       <ray>
         <scan>
@@ -302,7 +302,7 @@
   <!-- LOGICAL CAMERA JOINT -->
   <joint name="logical_camera_joint" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz="0 0 1.0" rpy="0 0 0"/>
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="logical_camera_link"/>
   </joint>
@@ -319,7 +319,7 @@
             <aspect_ratio>1.778</aspect_ratio>
           </logical_camera>
 
-          <visualize>true</visualize>
+          <visualize>false</visualize>
           <always_on>true</always_on>
           <update_rate>10</update_rate>
       </sensor>
