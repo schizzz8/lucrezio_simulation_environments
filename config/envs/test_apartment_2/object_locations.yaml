@@ -22,11 +22,11 @@ chair_ikea_borje:
   position: [ 1.969930, -0.357635, 0.0 ]
   orientation: [ 0.0, 0.0, 0.0 ]
 
-couch:
-  model: couch
-  model_type: sdf
-  position: [ -0.971137, -0.680618, 0.0 ]
-  orientation: [ 0.0, 0.0, 1.57 ]
+#couch:
+#  model: couch
+#  model_type: sdf
+#  position: [ -0.971137, -0.680618, 0.0 ]
+#  orientation: [ 0.0, 0.0, 1.57 ]
   
 milk:
   model: milk
