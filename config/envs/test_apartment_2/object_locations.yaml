@@ -22,12 +22,31 @@ chair_ikea_borje:
   position: [ 1.969930, -0.357635, 0.0 ]
   orientation: [ 0.0, 0.0, 0.0 ]
 
-#couch:
-#  model: couch
-#  model_type: sdf
-#  position: [ -0.971137, -0.680618, 0.0 ]
-#  orientation: [ 0.0, 0.0, 1.57 ]
-  
+couch:
+  model: couch
+  model_type: sdf
+  position: [ -0.971137, -0.050618, 0.0 ]
+  orientation: [ 0.0, 0.0, -1.57 ]
+
+ 
+table_tv:
+  model: table_tv
+  model_type: sdf
+  position: [ -3.507171, 0.0, 0 ]
+  orientation: [ 0.0, 0.0, -1.57 ]
+
+tv_samsung:
+  model: tv_samsung
+  model_type: sdf
+  position: [ -3.431988, 0.0, 0.576413 ]
+  orientation: [ 0.0, 0.0, 1.57 ]
+
+cabinet_ikea_malm_big:
+  model: cabinet_ikea_malm_big
+  model_type: sdf
+  position: [ -2.338829, 2.341134, 0 ]
+  orientation: [ 0.0, 0.0, -3.14 ]
+
 milk:
   model: milk
   model_type: sdf
@@ -51,23 +70,4 @@ zwieback:
   model_type: sdf
   position: [ 1.646010, -1.036690, 0.750673 ]
   orientation: [ 0.0, 0.0, 0.0 ]
-  
-cabinet_ikea_malm_big:
-  model: cabinet_ikea_malm_big
-  model_type: sdf
-  position: [ -2.338829, 2.341134, 0 ]
-  orientation: [ 0.0, 0.0, -3.14 ]
-
-table_tv:
-  model: table_tv
-  model_type: sdf
-  position: [ -3.507171, 0.0, 0 ]
-  orientation: [ 0.0, 0.0, -1.57 ]
-
-tv_samsung:
-  model: tv_samsung
-  model_type: sdf
-  position: [ -3.431988, 0.0, 0.576413 ]
-  orientation: [ 0.0, 0.0, 1.57 ]
-
 
