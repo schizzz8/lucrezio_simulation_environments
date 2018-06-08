@@ -25,7 +25,7 @@ chair_ikea_borje:
 couch:
   model: couch
   model_type: sdf
-  position: [ -0.971137, -0.050618, 0.0 ]
+  position: [ -1.171137, -0.050618, 0.0 ]
   orientation: [ 0.0, 0.0, -1.57 ]
 
  
