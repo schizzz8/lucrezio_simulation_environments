@@ -13,13 +13,13 @@ burner_stove:
 table_ikea_bjursta:
   model: table_ikea_bjursta
   model_type: sdf
-  position: [ 1.77236080355, -1.38153609543, 0.0 ]
+  position: [ 1.77236080355, -1.0, 0.0 ]
   orientation: [ 0.0, 0.0, 0.0 ]
     
 chair_ikea_borje:
   model: chair_ikea_borje
   model_type: sdf
-  position: [ 1.969930, -0.357635, 0.0 ]
+  position: [ 1.969930, 0.0, 0.0 ]
   orientation: [ 0.0, 0.0, 0.0 ]
 
 couch:
