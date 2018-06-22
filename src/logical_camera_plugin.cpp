@@ -36,6 +36,8 @@ void LogicalCameraPlugin::OnUpdate(){
   msgs::LogicalCameraImage logical_image;
   lucrezio_simulation_environments::LogicalImage msg;
 
+  auto last_update_time = this->parentSensor->LastUpdateTime();
+
   logical_image = this->parentSensor->Image();
   gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene();
   if (!scene || !scene->Initialized())
