@@ -46,7 +46,18 @@
     <mu2>0.0</mu2>
     <material>Gazebo/Black</material>
   </gazebo>
-
+  
+  <!-- Ground Truth Pose Publisher Plug-in 
+  <gazebo>
+  <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+    <frameName>map</frameName>
+    <bodyName>base_link</bodyName>
+    <topicName>sbrodom</topicName>
+    <updateRate>30.0</updateRate>
+  </plugin>
+  </gazebo>
+  -->
+  
   <!-- LEFT WHEEL -->
   <link name="left_wheel">
     <visual>

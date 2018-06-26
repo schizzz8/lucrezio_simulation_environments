@@ -36,14 +36,13 @@ void LogicalCameraPlugin::OnUpdate(){
   msgs::LogicalCameraImage logical_image;
   lucrezio_simulation_environments::LogicalImage msg;
 
-  auto last_update_time = this->parentSensor->LastUpdateTime();
-
   logical_image = this->parentSensor->Image();
   gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene();
   if (!scene || !scene->Initialized())
     return;
 
-  msg.header.stamp = ros::Time::now();
+//  msg.header.stamp = ros::Time::now();
+  msg.header.stamp = ros::Time(this->parentSensor->LastUpdateTime().Double());
   msg.header.frame_id = "logical_camera_link";
 
   msg.pose.position.x = logical_image.pose().position().x();
