@@ -1,0 +1,66 @@
+bed_king_1:
+  model: bed_king_1
+  model_type: sdf
+  position: [ -1, -4.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+
+table_round_1:
+  model: table_round_1
+  model_type: sdf
+  position: [ 3.0, -4.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+
+refrigerator_white_1:
+  model: refrigerator_white_1
+  model_type: sdf
+  position: [ 5.3, 4.5, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+stove_4burners_1:
+  model: stove_4burners_1
+  model_type: sdf
+  position: [ 3.5, 6.4, 0.0 ]
+  orientation: [ 0.0, 0.0, 3.1416 ]
+
+chair_modern_1:
+  model: chair_modern_1
+  model_type: sdf
+  position: [ -2, 4.5, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+chair_fancy_1:
+  model: chair_fancy_1
+  model_type: sdf
+  position: [ 1.5, -4.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+sofa_large_1:
+  model: sofa_large_1
+  model_type: sdf
+  position: [ 5.3, 0.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+shower_big_1:
+  model: shower_big_1
+  model_type: sdf
+  position: [ -4.55, 6.35, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+sink_big_1:
+  model: sink_big_1
+  model_type: sdf
+  position: [ -3.3, 3.5, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+toilet_white_1:
+  model: toilet_white_1
+  model_type: sdf
+  position: [ -5.7, 4.5, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
+table_2person_1:
+  model: table_2person_1
+  model_type: sdf
+  position: [ -2.5, 4.5, 0.0 ]
+  orientation: [ 0.0, 0.0, 1.5708 ]
+
