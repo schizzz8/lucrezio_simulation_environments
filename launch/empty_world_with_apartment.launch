@@ -18,8 +18,11 @@
 
 
 	<!-- Upload object locations and spawn them into Gazebo -->
-	<include file="$(find lucrezio_simulation_environments)/launch/upload_object_locations.launch"/>
+	<include file="$(find lucrezio_simulation_environments)/launch/upload_object_locations.launch">
+	<arg name="environment" value="$(arg environment)" />
+	</include>
+	
   <node name="spawn_objects" pkg="lucrezio_simulation_environments" type="spawn_object.py" args="all"/>
-
+  
 
 </launch>

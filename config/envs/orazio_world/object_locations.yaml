@@ -1,0 +1,121 @@
+construction_cone_1:
+  model: construction_cone
+  model_type: sdf
+  position: [ 1.2, 3.4, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_2:
+  model: construction_cone
+  model_type: sdf
+  position: [ 3.0, 7.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_3:
+  model: construction_cone
+  model_type: sdf
+  position: [ -4.0, 2.12, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_4:
+  model: construction_cone
+  model_type: sdf
+  position: [ 2.12, -3.4, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_5:
+  model: construction_cone
+  model_type: sdf
+  position: [ -7.8, -6.1, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_6:
+  model: construction_cone
+  model_type: sdf
+  position: [ -8.2, -5.3, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_7:
+  model: construction_cone
+  model_type: sdf
+  position: [ 1.2, 6.1, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_8:
+  model: construction_cone
+  model_type: sdf
+  position: [ -8.3, 5.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_9:
+  model: construction_cone
+  model_type: sdf
+  position: [ 2.45, 5.78, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_10:
+  model: construction_cone
+  model_type: sdf
+  position: [ -3.6, 6.78, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_11:
+  model: construction_cone
+  model_type: sdf
+  position: [ -6.0, -1.2, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_12:
+  model: construction_cone
+  model_type: sdf
+  position: [ 5.6, 4.3, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_13:
+  model: construction_cone
+  model_type: sdf
+  position: [ -7.1, 6.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_14:
+  model: construction_cone
+  model_type: sdf
+  position: [ 3.2, -4.1, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_15:
+  model: construction_cone
+  model_type: sdf
+  position: [ -4.1, -6.2, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_16:
+  model: construction_cone
+  model_type: sdf
+  position: [ 2.0, 6.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_17:
+  model: construction_cone
+  model_type: sdf
+  position: [ -3.12, 1.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_18:
+  model: construction_cone
+  model_type: sdf
+  position: [ 6, -2.1, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_19:
+  model: construction_cone
+  model_type: sdf
+  position: [ -2.3, 2.3, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+construction_cone_20:
+  model: construction_cone
+  model_type: sdf
+  position: [ -4.0, -5.0, 0.0 ]
+  orientation: [ 0.0, 0.0, 0 ]
+  
+
