@@ -58,8 +58,11 @@ void LogicalCameraPlugin::OnUpdate(){
   for(int i=0; i < number_of_models; i++){
     lucrezio_simulation_environments::Model model_msg;
 
-    if (logical_image.model(i).name() == "test_apartment_2" || logical_image.model(i).name() == "ground_plane" || logical_image.model(i).name() == "apartment_1"
-        || logical_image.model(i).name() == "")
+    if (logical_image.model(i).name() == "test_apartment_2" ||
+        logical_image.model(i).name() == "ground_plane" ||
+        logical_image.model(i).name() == "apartment_1"||
+        logical_image.model(i).name() == "orazio_world"||
+        logical_image.model(i).name() == "")
       continue;
 
     rendering::VisualPtr visual = scene->GetVisual(logical_image.model(i).name());
