@@ -1,0 +1,2 @@
+add_subdirectory(logical_camera_plugin)
+add_subdirectory(nodes)

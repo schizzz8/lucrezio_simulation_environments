@@ -43,5 +43,8 @@
   <!-- Run the controller manager -->
   <rosparam command="load" file="$(find lucrezio_simulation_environments)/config/diffdrive.yaml" ns="lucrezio" />
   <node name="lucrezio_controller_spawner" pkg="controller_manager" type="spawner" args="lucrezio --shutdown-timeout 3"/>
+  
+  <!-- Run pose_broadcaster node-->
+  <node name="pose_broadcaster" pkg="lucrezio_simulation_environments" type="pose_broadcaster_node" output="log"/>
 
 </launch>

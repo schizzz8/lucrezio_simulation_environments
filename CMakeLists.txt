@@ -16,9 +16,12 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
 )
 
-## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+# Find Eigen3
+find_package(Eigen3 REQUIRED)
+include_directories(${EIGEN3_INCLUDE_DIR})
 
+
+#find Gazebo
 find_package(gazebo REQUIRED)
 
 link_directories(${GAZEBO_LIBRARY_DIRS})
@@ -27,15 +30,6 @@ include_directories(
   ${Boost_INCLUDE_DIR} 
   ${catkin_INCLUDE_DIRS} 
   ${GAZEBO_INCLUDE_DIRS}
-)
-
-add_library(logical_camera_plugin SHARED 
-  src/logical_camera_plugin.cpp src/logical_camera_plugin.h
-)
-
-target_link_libraries(logical_camera_plugin 
-  ${catkin_LIBRARIES} 
-  ${GAZEBO_LIBRARIES}
 )
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -143,8 +137,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-#  ${catkin_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
+  ${PROJECT_SOURCE_DIR}/src
 )
 
 ## Declare a C++ library
@@ -176,6 +170,8 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
 #############
 ## Install ##
